@@ -6,59 +6,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PageTransition } from "@/components/PageTransition";
-
-const posts = [
-  {
-    id: 1,
-    title: "Getting Started with React and TypeScript",
-    date: "May 15, 2023",
-    category: "Development",
-    excerpt: "Learn how to set up a new React project with TypeScript and understand the benefits of using TypeScript in React applications.",
-    tags: ["React", "TypeScript", "Web Development"]
-  },
-  {
-    id: 2,
-    title: "Building Responsive UIs with TailwindCSS",
-    date: "April 22, 2023",
-    category: "UI/UX",
-    excerpt: "Discover how to create responsive and beautiful user interfaces using TailwindCSS without writing custom CSS.",
-    tags: ["TailwindCSS", "Responsive Design", "CSS"]
-  },
-  {
-    id: 3,
-    title: "Advanced State Management with React Context and Hooks",
-    date: "March 10, 2023",
-    category: "Development",
-    excerpt: "Learn advanced patterns for managing state in React applications using Context API and custom hooks.",
-    tags: ["React", "State Management", "Hooks"]
-  },
-  {
-    id: 4,
-    title: "Optimizing React Applications for Performance",
-    date: "February 28, 2023",
-    category: "Development",
-    excerpt: "Discover techniques and best practices to optimize your React applications for better performance and user experience.",
-    tags: ["React", "Performance", "Optimization"]
-  },
-  {
-    id: 5,
-    title: "Introduction to GraphQL with Node.js",
-    date: "January 15, 2023",
-    category: "Backend",
-    excerpt: "Learn the basics of GraphQL and how to build a GraphQL API using Node.js and Apollo Server.",
-    tags: ["GraphQL", "Node.js", "API"]
-  },
-  {
-    id: 6,
-    title: "Building Accessible Web Applications",
-    date: "December 20, 2022",
-    category: "Accessibility",
-    excerpt: "Understanding the importance of web accessibility and implementing best practices in your applications.",
-    tags: ["Accessibility", "Web Development", "ARIA"]
-  }
-];
-
-const categories = ["All", "Development", "UI/UX", "Backend", "Accessibility"];
+import { posts, categories } from "@/data/blog";
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -80,9 +28,9 @@ const Blog = () => {
       <section className="py-16 md:py-24 bg-muted">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6">Blog</h1>
+            <h1 className="mb-6">DevOps Insights</h1>
             <p className="text-xl text-foreground/80">
-              Thoughts, tutorials, and insights about development and design
+              Thoughts, tutorials, and insights about DevOps practices, tools, and automation
             </p>
           </div>
         </div>
@@ -192,9 +140,9 @@ const Blog = () => {
       {/* Newsletter */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="container max-w-3xl text-center">
-          <h2 className="mb-4">Stay Updated</h2>
+          <h2 className="mb-4">Stay Updated on DevOps Trends</h2>
           <p className="text-foreground/70 mb-8">
-            Subscribe to my newsletter to get notified when I publish new articles.
+            Subscribe to my newsletter for the latest articles, tutorials, and insights on DevOps practices and tools.
           </p>
           <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
             <Input

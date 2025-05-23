@@ -10,61 +10,12 @@ import {
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
+import { projects } from "@/data/projects";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
 
-const categories = ["All", "Web", "Mobile", "UI/UX", "Backend"];
-
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A fully functional e-commerce platform with product listings, cart functionality, and payment integration.",
-    category: "Web",
-    image: "placeholder-1",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"]
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A responsive task management application with drag-and-drop functionality and team collaboration features.",
-    category: "Web",
-    image: "placeholder-2",
-    tags: ["React", "TypeScript", "Firebase"]
-  },
-  {
-    id: 3,
-    title: "Fitness Tracking Mobile App",
-    description: "A cross-platform mobile app that helps users track their fitness goals, workouts, and nutrition.",
-    category: "Mobile",
-    image: "placeholder-3",
-    tags: ["React Native", "Redux", "GraphQL"]
-  },
-  {
-    id: 4,
-    title: "Real Estate Listing Website",
-    description: "A modern real estate listing website with advanced search functionality and interactive maps.",
-    category: "Web",
-    image: "placeholder-4",
-    tags: ["Next.js", "TailwindCSS", "PostgreSQL"]
-  },
-  {
-    id: 5,
-    title: "Admin Dashboard UI",
-    description: "A responsive admin dashboard with customizable widgets, dark mode, and data visualization.",
-    category: "UI/UX",
-    image: "placeholder-5",
-    tags: ["Figma", "HTML/CSS", "JavaScript"]
-  },
-  {
-    id: 6,
-    title: "API Service for Content Management",
-    description: "A robust API service for content management with authentication, authorization, and caching.",
-    category: "Backend",
-    image: "placeholder-6",
-    tags: ["Node.js", "Express", "MongoDB", "Redis"]
-  },
-];
+const categories = ["All", "DevOps", "Infrastructure", "Monitoring", "Security", "Cloud", "GitOps"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -79,9 +30,10 @@ const Projects = () => {
       <section className="py-16 md:py-24 bg-muted">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6">My Projects</h1>
+            <h1 className="mb-6">DevOps Projects</h1>
             <p className="text-xl text-foreground/80">
-              A collection of my work, side projects, and experiments
+              A collection of my DevOps engineering work, including CI/CD pipelines, infrastructure as code,
+              and cloud automation solutions
             </p>
           </div>
         </div>
@@ -145,8 +97,14 @@ const Projects = () => {
                 </CardContent>
                 
                 <CardFooter className="flex justify-between pt-4 border-t">
-                  <Button variant="outline" size="sm">View Details</Button>
-                  <Button variant="ghost" size="sm">Demo</Button>
+                  <Button variant="outline" size="sm" className="flex items-center gap-2">
+                    <Github className="h-4 w-4" />
+                    View Code
+                  </Button>
+                  <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                    <ExternalLink className="h-4 w-4" />
+                    Demo
+                  </Button>
                 </CardFooter>
               </Card>
             </motion.div>
@@ -157,9 +115,9 @@ const Projects = () => {
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="container text-center max-w-3xl">
-          <h2 className="mb-4">Have a project in mind?</h2>
+          <h2 className="mb-4">Looking for DevOps Engineering Support?</h2>
           <p className="text-foreground/70 mb-8">
-            I'm always interested in hearing about new projects and opportunities. Let's build something amazing together!
+            I can help with containerization, CI/CD pipelines, infrastructure automation, and cloud architecture. Let's build reliable, scalable systems together!
           </p>
           <Button asChild size="lg">
             <a href="/contact">Get in Touch</a>
