@@ -252,32 +252,41 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
+     {/* Technologies Section */}
       <section className="py-16 bg-muted">
         <div className="container">
           <h2 className="text-center mb-12">Technologies I Work With</h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
             {[
-              'Kubernetes', 'Docker', 'Jenkins', 'GitHub Actions', 'Terraform', 'Ansible', 
-              'AWS', 'Azure', 'GCP', 'Prometheus', 'Grafana', 'ELK Stack',
-              'ArgoCD', 'FluxCD', 'Helm', 'Python', 'Bash', 'Linux'
-            ].map((tech) => (
-              <div 
-                key={tech} 
-                className="bg-card shadow-sm rounded-lg p-4 text-center border card-hover"
-              >
-                <div className="h-12 flex items-center justify-center mb-2">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    {/* Placeholder for tech icon */}
+              'Kubernetes', 'Docker', 'Jenkins', 'GitHub', 'Terraform', 'Ansible', 
+              'AWS', 'Prometheus', 'Grafana', ,
+              'ArgoCD', 'Helm', 'Python', 'Bash', 'Linux','Tomcat','Maven','EKS','SonarQube'
+            ].map((tech) => {
+              const iconName = tech
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^a-z\-]/g, '');
+              return (
+                <div 
+                  key={tech} 
+                  className="bg-card shadow-sm rounded-lg p-4 text-center border card-hover"
+                >
+                  <div className="h-12 flex items-center justify-center mb-2">
+                    <img
+                      src={`/icons/${iconName}.svg`}
+                      alt={`${tech} logo`}
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
+                  <p className="font-medium">{tech}</p>
                 </div>
-                <p className="font-medium">{tech}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+
 
       {/* Latest Articles */}
       <section className="section-container">
