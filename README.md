@@ -105,11 +105,3 @@ npm run preview
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-Feel free to ask if you want me to add badges for Docker, Jenkins, Kubernetes, SonarQube, or Nexus, or containerization/DevOps tools you are using!
-
----
-
-**This README structure and badges make your project easy to understand and visually appealing for DevOps professionals reviewing your portfolio.**
