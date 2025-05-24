@@ -102,6 +102,5 @@ npm run preview
 
 ---
 
-## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the [MIT License](./LICENSE). See the `LICENSE` file for more information.
